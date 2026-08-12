@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="En">
+<head>
+    <title>News Portal</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    {% if type == 'movies' %}
+    <h1>{{msg}}</h1>
+    <img src="{% static 'images/toxic.jpg' %}" alt="TOXIC">
+    <h2>{{msg1}}</h2>
+    <img src="{% static 'images/Im-game.jpg '%}" alt="I'M GAME">
+    <h2>{{msg2}}</h2>
+    <img src="{% static 'images/sardar2.jpg' %}" alt="SARDAR 2">
+    <h2>{{msg3}}</h2>
+    {% elif type == 'sports' %}
+    <h1>{{msg}}</h1>
+    <img src="{% static 'images/fifa-2026.jpg' %}" alt="FIFA 2026">
+    <h2>{{msg1}}</h2>
+    <img src="{% static 'images/ipl.jpg' %}" alt="IPL">
+    <h2>{{msg2}}</h2>
+    <img src="{% static 'images/hockey.jpg' %}" alt="HOCKEY">
+    <h2>{{msg3}}</h2>
+    {% elif type == 'politics' %}
+    <h1>{{msg}}</h1>
+    <img src="{% static 'images/Vande-Mataram.jpeg' %}" alt="VANDE MATARAM">
+    <h2>{{msg1}}</h2>
+    <img src="{% static 'images/Benjamin.avif' %}" alt="BENJAMIN NETANYAHU">
+    <h2>{{msg2}}</h2>
+    <img src="{% static 'images/hormuz.jpg' %}" alt="STRAIT OF HORMUZ">
+    <h2>{{msg3}}</h2>
+    {%endif%}
+</body>
+</html>
