@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Seed DATA</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+{% if seed_list %}
+    {% for s in seed_list %}
+        <h1>{{s.sname}} Details</h1>
+        <ol>
+            <li>{{s.rollno}}</li>
+            <li>{{s.email}}</li>
+            <li>{{s.dob}}</li>
+            <li>{{s.marks}}</li>
+            <li>{{s.phno}}</li>
+            <li>{{s.addr}}</li>
+        </ol>
+    {% endfor %}
+{% else %}
+    <h1>No data found...</h1>
+{% endif %}
+</body>
+</html>
