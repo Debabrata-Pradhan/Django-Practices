@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <title>JobsPortal</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+<h1>Jobs Portal</h1>
+{% if jobs_list %}
+    {% for jobs in jobs_list %}
+        <ul>
+            <li>
+                Title : {{jobs.title}}
+            </li>
+            <li>
+                Requirements : {{jobs.eligibility}}
+            </li>
+            <li>
+                Company : {{jobs.company}}
+            </li>
+            <li>
+                Salary : {{jobs.salary}}
+            </li>
+            <li>
+                Location : {{jobs.location}}
+            </li>
+            <li>
+                Contact : {{jobs.contact}}
+            </li>
+        </ul>
+    {% endfor %}
+{% else %}
+    <h1>Jobs not Found...</h1>
+{% endif %}
+</body>

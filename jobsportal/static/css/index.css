@@ -1,0 +1,74 @@
+/* Base Page Settings */
+body {
+    background-color: #2f3640; /* Clean dark grey background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f5f6fa; /* Crisp light-toned text */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Page Header */
+h1 {
+    color: #00a8ff; /* Vibrant blue header */
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Job Card Container */
+ul {
+    background-color: #353b48; /* Slightly lighter container background */
+    border: 2px solid #487eb0;  /* Subtle blue-grey accent border */
+    border-radius: 12px;       /* Smooth rounded corners */
+    max-width: 500px;          /* Prevents card from stretching full screen */
+    margin: 0 auto 25px auto;  /* Centers card and forces spacing below it */
+    padding: 25px;             /* Breathes space inside the card boundaries */
+    list-style-type: none;     /* Completely removes bullet points */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for 3D depth */
+    transition: transform 0.2s ease; /* Smooth hover transition animation */
+}
+
+/* Card Hover Animation Effect */
+ul:hover {
+    transform: translateY(-5px); /* Makes card float up slightly on mouse hover */
+    border-color: #00a8ff;        /* Brightens border on hover */
+}
+
+/* Base List Item Details */
+li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #dcdde1;
+}
+
+/* Target Specific List Rows Using CSS Pseudo-classes */
+
+/* Row 1: Job Title */
+li:nth-child(1) {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #487eb0; /* Adds a nice divider under title */
+    padding-bottom: 10px;
+}
+
+/* Row 3: Company Name */
+li:nth-child(3) {
+    font-weight: 600;
+    color: #00a8ff;
+}
+
+/* Row 4: Salary Accentuation */
+li:nth-child(4) {
+    font-weight: bold;
+    color: #4cd137; /* Pops out salary in bright green */
+    background-color: rgba(76, 209, 55, 0.1); /* Subtle green highlight box */
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin: 8px 0;
+}
+
