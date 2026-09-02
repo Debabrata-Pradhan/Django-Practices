@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%load static%}
+<head>
+    <title>
+        FeedBack Form
+    </title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="container" align="center">
+        {% if Submitted %}
+            <h1>Hello {{name}}, thanks for providing feedback, it is very helpful for us to provide better service</h1>
+        {% else %}
+            <h1>
+                Student FeedBack Form
+            </h1>
+            <form method="POST">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="Submit" value="Submit FeedBack">
+            </form>
+        {% endif %}
+    </div>
+</body>
